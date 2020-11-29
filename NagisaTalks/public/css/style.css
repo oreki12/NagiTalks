@@ -1,0 +1,26 @@
+body{
+    background: rgb(199,185,185);
+    background: linear-gradient(90deg, rgba(199,185,185,1) 0%, rgba(134,134,134,1) 39%, rgba(0,0,0,1) 100%);
+}
+
+.heroimg{
+    margin: 10px auto;
+    border: 4mm ridge rgba(73, 72, 71, 0.6);
+}
+.quote, figcaption{
+    color: rgb(224, 224, 224);
+}
+
+#create{
+    margin: 10px auto;
+}
+
+#idetails{
+    margin: 10px auto;
+}
+
+.card{
+	width: 40%;
+	float: left;
+	margin: 3%;
+}

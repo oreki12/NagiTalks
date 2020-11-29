@@ -1,0 +1,56 @@
+<%-include('partials/head')%>
+<%-include('partials/nav')%>
+
+    <div class="container">
+        <h1>Hello <%=comment.username%></h1>
+        <hr>
+        <div class="form-group idetails">
+            <label for="inputName">Your 'ID' is:</label>
+            <input type="text" class="form-control" name="inputName" id="inputName" value="<%=comment.id%>">
+        </div>
+        <!-- comment -->
+        <section>
+          <h2>Your comment</h2>
+          <hr>
+        </section>
+        <ul class="list-group">
+              <li class="list-group-item list-group-item-secondary">
+                  <%= comment.comment %>-<%=comment.username%>
+                  <a name="update" class="btn btn-outline-warning rounded float-right" href="/comments/<%= comment.id %>/edit" role="button">update</a>
+              </li>
+      </ul>
+      <br>
+      <form action="/comments/<%=comment.id%>?_method=DELETE" method="POST">
+        <button class="btn btn-outline-danger" type="submit">Delete</button>
+      </form>
+
+        <!-- card images -->
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://images3.alphacoders.com/112/112919.jpg" alt="Nagisa">
+            <div class="card-body">
+              <h5 class="card-title">Nagisa:)</h5>
+              <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga labore voluptate asperiores mollitia, aliquam nobis quaerat voluptatum sunt. Omnis.</p>
+              <a href="https://clannad.fandom.com/wiki/Nagisa_Furukawa" class="btn btn-outline-info"">Nagisa wiki</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://images4.alphacoders.com/849/thumbbig-84948.jpg" alt="Nagisa">
+            <div class="card-body">
+              <h5 class="card-title">Nagisa:)</h5>
+              <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga labore voluptate asperiores mollitia, aliquam nobis quaerat voluptatum sunt. Omnis.</p>
+              <a href="https://clannad.fandom.com/wiki/Nagisa_Furukawa" class="btn btn-outline-info"">Nagisa wiki</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://images8.alphacoders.com/842/thumb-350-842135.jpg" alt="Nagisa">
+            <div class="card-body">
+              <h5 class="card-title">Nagisa:)</h5>
+              <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga labore voluptate asperiores mollitia, aliquam nobis quaerat voluptatum sunt. Omnis.</p>
+              <a href="https://clannad.fandom.com/wiki/Nagisa_Furukawa" class="btn btn-outline-info"">Nagisa wiki</a>
+            </div>
+        </div>
+    </div>
+
+<%-include('partials/footer')%>
